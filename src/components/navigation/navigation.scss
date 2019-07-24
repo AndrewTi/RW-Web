@@ -1,0 +1,58 @@
+.navigation{
+    max-width: 450px;
+    min-width: 300px;
+    background: #6a30da;
+    height: 100vh;
+
+    & > .logo_block{
+        width: 100%;
+        height: 110px;
+        background: #5913a5;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        & > .logo{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #6a30da
+        }
+
+        & > .logo_text{
+            width: 170px;
+            height: 20px;
+            border-radius: 23px;
+            background: #6a30da
+        }
+    }
+
+    & > .categories_list {
+        & > ul {
+            padding: 0 25px;
+            list-style-type: none;
+            text-align: center;
+            color: white;
+            font-style: INHERIT;
+
+            li {
+                height: 40px;
+                line-height: 2.4;
+                font-size: 17px;
+                position: relative;
+
+                & > .cat_icon {
+                    width: 25px;
+                    height: 25px;
+                    background-position: center !important;
+                    background-size: contain !important;
+                    background-repeat: no-repeat !important;
+                    position: absolute;
+                    top: 5px;
+                    left: 19px;
+
+                }
+            }
+        }
+    }
+}
