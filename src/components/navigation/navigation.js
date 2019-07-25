@@ -7,6 +7,8 @@ import settings from './images/settings.svg'
 import stat from './images/stat.svg'
 import training from './images/training.svg'
 
+import {Link} from 'react-router-dom'
+
 
  
 
@@ -20,10 +22,12 @@ const categoriesArray = [
 ]
 
 const renderCat = categoriesArray.map((item)=>{
-    return <li>
-            {item.name}
-            <div className="cat_icon" style={{background: `url(${item.img})`}}></div>
-        </li>
+    return <Link to={`/main-page/${item.name.toLocaleLowerCase()}`}>
+            <li>
+                {item.name}
+                <div className="cat_icon" style={{background: `url(${item.img})`}}></div>
+            </li>
+        </Link>
 })
 
 const Navigation  = () =>{
@@ -33,10 +37,19 @@ const Navigation  = () =>{
                 <div className="logo"></div>
                 <div className="logo_text"></div>
             </div>
-            <div className="categories_list">
+            <div className="nav_container">
                 <ul>
                     {renderCat}
                 </ul>
+            </div>
+            <div className="nav_container">
+                <h4>Recent Collections</h4>
+                <div className="recent_block">
+                    <div className='recent_item'>Restaraunt</div>
+                    <div className='recent_item'>Communication</div>
+                    <div className='recent_item'>Business</div>
+                    <div className='recent_item'>Education</div>
+                </div>
             </div>
         </section>
     )

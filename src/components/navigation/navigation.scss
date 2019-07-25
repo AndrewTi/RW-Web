@@ -1,20 +1,24 @@
 .navigation{
     max-width: 450px;
-    min-width: 300px;
+    min-width: 245px;
     background: #6a30da;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & > .logo_block{
         width: 100%;
-        height: 110px;
+        height: 90px;
+        min-height: 90px;
         background: #5913a5;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
 
         & > .logo{
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: #6a30da
         }
@@ -27,32 +31,54 @@
         }
     }
 
-    & > .categories_list {
+    & > .nav_container {
+        width: 200px;
+        border-bottom: 3px solid #5d15ab47;
+        text-align: center;
+        color: white;
+
+        & > .recent_block{
+            width: 100%;
+
+            & > .recent_item{
+                height: 33px;
+                font-size: 13px;
+                line-height: 2.5;
+            }
+        }
+
         & > ul {
-            padding: 0 25px;
+            padding: 0;
             list-style-type: none;
             text-align: center;
             color: white;
             font-style: INHERIT;
 
-            li {
-                height: 40px;
+           & > a {
+               text-decoration: none;
+               color: white;
+
+               li {
+                height: 36px;
                 line-height: 2.4;
-                font-size: 17px;
+                font-size: 15px;
                 position: relative;
+                margin: 5px 0;
 
                 & > .cat_icon {
-                    width: 25px;
-                    height: 25px;
+                    width: 23px;
+                    height: 23px;
                     background-position: center !important;
                     background-size: contain !important;
                     background-repeat: no-repeat !important;
                     position: absolute;
-                    top: 5px;
-                    left: 19px;
+                    top: 2px;
+                    left: 4px;
 
                 }
             }
+
+           }
         }
     }
 }

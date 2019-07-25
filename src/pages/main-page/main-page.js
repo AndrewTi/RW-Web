@@ -8,7 +8,7 @@ const MainPage = () =>{
         <div className="main_page">
             <Navigation/>
             <section className="main_content">
-
+                <div className="main_head"></div>
             </section>
         </div>
     )
