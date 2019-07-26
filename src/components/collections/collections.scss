@@ -1,0 +1,48 @@
+.collections_section{
+    width: 85%;
+    height: 100vh;
+    width: 85%;
+    height: 100vh;
+    margin: 0 auto;
+
+    & > .col_head{
+        width: 100%;
+        display: flex;
+        margin-top: 14px;
+        justify-content: space-between;
+
+        & > .col_head_buttons{
+
+            & > button {
+                height: 33px;
+                background: #6a30da;
+                color: white;
+                border-radius: 5px;
+                margin-right: 24px;
+                width: 93px;
+                border: none;            
+            }
+        }
+
+        & > .add_note{
+            position: relative;
+            color: #6a30da;
+            font-size: 19px;
+            line-height: 1.5;
+            padding-left: 60px;
+            cursor: pointer;
+
+            & > .add_plus{
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBT…AwH03VCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=);
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 21px;
+                top: 3px;
+            }
+        }
+    }
+}

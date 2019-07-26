@@ -13,12 +13,12 @@ import {Link} from 'react-router-dom'
  
 
 const categoriesArray = [
-    {name: "Home", img: home},
-    {name: "Collections", img: collections},
-    {name: "Training", img: training},
-    {name: "Statistics", img: stat},
-    {name: "Settings", img: settings},
-    {name: "Logout", img: logout},
+    {name: "Home", img: home ,active: false},
+    {name: "Collections", img: collections, active: true},
+    {name: "Training", img: training,active: false},
+    {name: "Statistics", img: stat , active: false},
+    {name: "Settings", img: settings , active: false},
+    {name: "Logout", img: logout,active: false},
 ]
 
 const renderCat = categoriesArray.map((item)=>{
@@ -26,6 +26,7 @@ const renderCat = categoriesArray.map((item)=>{
             <li>
                 {item.name}
                 <div className="cat_icon" style={{background: `url(${item.img})`}}></div>
+                {item.active ? <div className="triangle"></div> : null}
             </li>
         </Link>
 })
